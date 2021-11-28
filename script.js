@@ -42,11 +42,6 @@ const detectFaces =async () =>{
 
 setupCamera();
 video.addEventListener('loadeddata',async ()=>{
-  ctx.canvas.width = window.innerWidth;
-
-  ctx.canvas.height = 3*window.innerWidth/4;
-
-  
     model =await blazeface.load();
     setInterval(detectFaces,60)
     // detectFaces()
